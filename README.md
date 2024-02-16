@@ -54,6 +54,7 @@ VALUES(
 php bin/magento setup:config:set --backend-frontname="magento_admin"
 sudo rm -r pub/static/*/* && sudo rm -r var/view_preprocessed/* && bin/magento cache:f && bin/magento cache:c
 bin/magento setup:upgrade && bin/magento setup:di:compile && bin/magento s:s:d -f
+bin/magento indexer:reindex
 ```
 ## Disable the default restriction page in browser:
 ![image](https://github.com/inajaf/ngrok-magento/assets/43228234/87075b95-ac42-400b-bc94-7371708e1c69)
